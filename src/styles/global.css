@@ -75,7 +75,6 @@
     --text-main: var(--dark-black);
     --text-secondary: var(--mid-black);
     --primary-color: var(--grad-red);
-    --header-color: var(--mid-gray);
     --font-family-serif: 'Archivo', sans-serif;
     --font-family-sans: 'Archivo', sans-serif;
 }
@@ -85,7 +84,6 @@
     --text-main: var(--light-gray);
     --text-secondary: var(--mid-gray);
     --primary-color: var(--grad-orange);
-    --header-color: var(--dark-black);
 }
 
 *,
