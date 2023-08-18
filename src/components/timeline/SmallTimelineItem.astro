@@ -1,0 +1,17 @@
+---
+const {label = ''} = Astro.props;
+---
+
+<style>
+    .small-timeline-item {
+        width: max-content;
+    }
+
+    p {
+        margin: 0;
+    }
+</style>
+
+<div class="timeline small-timeline-item">
+    <p>{label}</p>
+</div>

@@ -1,0 +1,43 @@
+---
+import SmallTimelineItem from "./timeline/SmallTimelineItem.astro";
+import Dots from "./timeline/Dots.astro";
+import TimelineCard from "./timeline/TimelineCard.astro";
+
+const logos = {
+    node: "assets/icons/node.svg",
+    next: "assets/icons/next.svg",
+    java: "assets/icons/java.svg",
+    kotlin: "assets/icons/kotlin.svg",
+    react: "assets/icons/react.svg",
+}
+---
+
+<style>
+    .timeline-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section > h2 {
+        display: inline-block;
+    }
+</style>
+
+<section>
+    <hr/>
+    <h2>How I've</h2> <h2 class="grad-text">tried out</h2> <h2>new tools</h2>
+    <div class="timeline-container">
+        <SmallTimelineItem label="Today"/>
+        <Dots/>
+        <TimelineCard title="Glistore" text="Build your own store" images={[logos.next,logos.node]} date="Jun/23"/>
+        <Dots/>
+        <TimelineCard title="Pomelo bebes" text="Clothes store" images={[logos.next,logos.node]} date="Mar/22"/>
+        <Dots/>
+        <TimelineCard title="LosHermanos" text="Stock & Sales" images={[logos.react,logos.kotlin]} date="Dec/21"/>
+        <Dots/>
+        <TimelineCard title="DistribJD" text="Stock & Sales" images={[logos.react,logos.java]} date="Mar/21"/>
+    </div>
+
+</section>

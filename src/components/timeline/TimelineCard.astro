@@ -1,0 +1,55 @@
+---
+
+export interface Props {
+    title: string,
+    text: string,
+    date: string,
+    images: string[],
+}
+
+const {
+    title = '',
+    text = '',
+    date = '',
+    images= [],
+} = Astro.props;
+---
+
+<style xmlns="http://www.w3.org/1999/xhtml">
+    .timeline-card {
+        display: flex;
+        gap: 6em;
+        justify-content: space-between;
+    }
+
+    .timeline-card div {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+
+    h2 {
+        margin: 0;
+    }
+
+    p {
+        color: var(--text-secondary);
+        font-size: 1.2em;
+        width: max-content;
+        margin: 0;
+    }
+</style>
+
+<div class="timeline timeline-card">
+    <div>
+        <h2>{title}</h2>
+        <p>{text}</p>
+        <span>
+        {images.map( i => <img src={i} alt=""/>)}
+            </span>
+    </div>
+    <div style="justify-content: space-between">
+        <small>{date}</small>
+        <small>See more</small>
+    </div>
+</div>

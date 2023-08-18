@@ -1,0 +1,34 @@
+---
+export interface Props {
+    title: string,
+    text: string,
+    date: string,
+}
+
+const {
+    title = '',
+    text = '',
+    date = '',
+} = Astro.props;
+---
+
+<style>
+    .ed-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1em;
+    }
+    p {
+        margin: 0;
+    }
+    .ed-item-text {
+        color: var(--text-secondary);
+    }
+</style>
+<div class="ed-item">
+    <img src="assets/icons/university-hat.svg" alt="univ icon"/>
+    <div>
+        <p><b>{title}</b> {date}</p>
+        <p class="ed-item-text">{text}</p>
+    </div>
+</div>
