@@ -345,6 +345,14 @@ input[name='theme-toggle'] {
     position: relative;
 }
 
+.menu-items {
+    display: flex;
+}
+
+nav img {
+    display: none;
+}
+
 @media (max-width: 1020px) {
     h1 {
         font-size: 3em;
@@ -353,6 +361,11 @@ input[name='theme-toggle'] {
     .content h1 {
         font-size: 2.4em;
     }
+
+    nav img {
+        display: block;
+    }
+
 }
 
 @media (max-width: 480px) {
@@ -366,4 +379,13 @@ input[name='theme-toggle'] {
         font-size: 1.2rem;
         margin: 1em 0;
     }
+
+    .menu-items {
+        display: none !important;
+    }
+
+    nav img {
+        display: block;
+    }
+
 }
