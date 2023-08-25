@@ -6,7 +6,6 @@
     --mid-gray: #B5BAC1;
     --light-gray: #DBDEE1;
     --violet: #9906AA;
-    --violet: #9906AA;
     --red: #DC0000;
     --orange: #FC6626;
     --grad-violet: linear-gradient(
@@ -381,7 +380,7 @@ nav img {
     }
 
     .menu-items {
-        display: none !important;
+        display: none;
     }
 
     nav img {

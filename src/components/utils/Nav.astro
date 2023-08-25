@@ -1,68 +1,79 @@
 ---
 import ThemeToggleButton from '../ThemeToggleButton.svelte';
-const { current = '' } = Astro.props;
+import NavMenu from "./NavMenu.astro";
+const {current = ''} = Astro.props;
 ---
 
 <style>
-  nav {
-    align-items: center;
-    display: flex;
-    flex: 1;
-    font-family: var(--font-family-sans);
-    font-weight: 700;
-    justify-content: flex-end;
-    text-transform: uppercase;
-  }
+    nav {
+        align-items: center;
+        display: flex;
+        flex: 1;
+        font-family: var(--font-family-sans);
+        font-weight: 700;
+        justify-content: flex-end;
+        text-transform: uppercase;
+        height: 35px;
 
-  a {
-    color: inherit;
-    text-decoration: none;
-    padding: 10px 5px;
-    display: block;
-    position: relative;
-    margin-left: 20px;
-    min-width: 70px;
-    text-align: center;
-  }
+    }
 
-  a:not(.selected) {
-    opacity: 0.7;
-  }
+    a {
+        color: inherit;
+        text-decoration: none;
+        padding: 10px 5px;
+        display: block;
+        position: relative;
+        margin-left: 20px;
+        min-width: 70px;
+        text-align: center;
+    }
 
-  a::before {
-    content: '';
-    position: absolute;
-    transition: transform .3s ease;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--text-secondary);
-    transform: scaleX(0);
-  }
+    a:not(.selected) {
+        opacity: 0.7;
+    }
 
-  a:hover::before,
-  .selected::before {
-    transform: scaleX(1);
-  }
+    a::before {
+        content: '';
+        position: absolute;
+        transition: transform .3s ease;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--text-secondary);
+        transform: scaleX(0);
+    }
 
-  .selected::before {
-    background: var(--primary-color);
-  }
+    a:hover::before,
+    .selected::before {
+        transform: scaleX(1);
+    }
 
-  .theme-toggle-container {
-    width: 75px;
-  }
+    .theme-toggle-container {
+        width: 75px;
+        margin: 1.5em;
+    }
+
 </style>
 
-<nav>
-  <div class="menu-items">
-    <a class={current === "" ? "selected" : ""} href='/'>home</a>
-    <a class={current === "about" ? "selected" : ""} href='/#experience'>experience</a>
-    <a class={current === "blog" ? "selected" : ""} href='/#education'>education</a>
-    <a class={current === "blog" ? "selected" : ""} href='/#projects'>projects</a>
-  </div>
-  <div class="theme-toggle-container">
-    <ThemeToggleButton client:load />
-  </div>
-</nav>
+<>
+    <nav>
+        <div class="menu-items">
+            <a class={current === "" ? "selected" : ""} href='/'>home</a>
+            <a class={current === "about" ? "selected" : ""} href='/#experience'>experience</a>
+            <a class={current === "blog" ? "selected" : ""} href='/#education'>education</a>
+            <a class={current === "blog" ? "selected" : ""} href='/#projects'>projects</a>
+        </div>
+        <div class="theme-toggle-container">
+            <ThemeToggleButton client:load/>
+        </div>
+
+        <p>
+            <span data-bs-toggle="collapse" href="#collapseExample" role="button"
+               aria-expanded="false" aria-controls="collapseExample">
+                <img alt="menu-icon" src="/assets/icons/menu.svg"/>
+            </span>
+        </p>
+    </nav>
+    <NavMenu current={current}/>
+</>

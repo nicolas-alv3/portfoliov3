@@ -1,0 +1,57 @@
+---
+const {current = ''} = Astro.props;
+---
+
+
+<style>
+    .menu-collapse {
+        background: var(--text-secondary);
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    .menu-content {
+        z-index: 1;
+        background: var(--mid-gray);
+        width: 100%;
+        height: 16em;
+        position: relative;
+    }
+
+    .menu-content a {
+        color: var(--dark-black);
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 5px;
+        display: block;
+        position: relative;
+        min-width: 70px;
+        text-align: center;
+    }
+
+    .menu-content a:not(.selected) {
+        opacity: 0.7;
+    }
+
+    img {
+        width: 3em;
+        height: 3em;
+    }
+</style>
+
+<>
+    <div class="collapse menu-collapse" id="collapseExample">
+        <div class="menu-content">
+            <a class={current === "" ? "selected" : ""} href='/'>HOME</a>
+            <a class={current === "about" ? "selected" : ""} href='/#experience'>EXPERIENCE</a>
+            <a class={current === "blog" ? "selected" : ""} href='/#education'>EDUCATION</a>
+            <a class={current === "blog" ? "selected" : ""} href='/#projects'>PROJECTS</a>
+            <a type="button" data-bs-toggle="collapse" href="#collapseExample" role="button"
+               aria-expanded="false" aria-controls="collapseExample" aria-label="Close">
+                <img src="/assets/icons/chevron-up.svg" alt="chevron-icon"/>
+            </a>
+        </div>
+    </div>
+</>
