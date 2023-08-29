@@ -1,0 +1,25 @@
+---
+const logos = [
+    { link: "linkedin link/", logo: "/assets/icons/linkedin"},
+    { link: "linkedin link/", logo: "/assets/icons/linkedin"},
+    { link: "linkedin link/", logo: "/assets/icons/linkedin"}
+]
+
+---
+<style>
+    section > h2 {
+        display: inline-block;
+    }
+    p {
+        color: var(--text-secondary);
+    }
+</style>
+
+<section id="reach-me-out">
+    <hr/>
+    <h2 class="grad-text">Thanks</h2> <h2>for your time</h2>
+    <p>Contact me on the following links</p>
+    { logos.map( l  => <>
+        <img  alt="logo" />
+    </>)}
+</section>
