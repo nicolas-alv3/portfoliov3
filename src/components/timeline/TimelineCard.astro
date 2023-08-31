@@ -37,6 +37,12 @@ const {
         width: max-content;
         margin: 0;
     }
+
+    .tl-more {
+        width: max-content;
+        color: var(--red);
+    }
+
 </style>
 
 <div class="timeline timeline-card">
@@ -44,11 +50,11 @@ const {
         <h2>{title}</h2>
         <p>{text}</p>
         <span>
-        {images.map( i => <img src={i} alt=""/>)}
+        {images.map( i => <img src={i} width="32" height="32" alt=""/>)}
             </span>
     </div>
     <div style="justify-content: space-between">
         <small>{date}</small>
-        <small>See more</small>
+        <small class="tl-more">See more</small>
     </div>
 </div>
