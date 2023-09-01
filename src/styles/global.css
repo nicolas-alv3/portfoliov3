@@ -1,4 +1,5 @@
 :root {
+    --bs-modal-bg: #000;
     --dark-black: #1E1F22;
     --mid-black: #2B2D31;
     --light-black: #313338;
@@ -75,10 +76,12 @@
     --primary-color: var(--grad-red);
     --font-family-serif: 'Archivo', sans-serif;
     --font-family-sans: 'Archivo', sans-serif;
+    --bs-modal-bg: #000;
 }
 
 :root.theme-dark {
     --background-body: var(--mid-black);
+    --bs-modal-bg:var(--mid-black) !important;
     --text-main: var(--light-gray);
     --text-secondary: var(--mid-gray);
     --primary-color: var(--grad-orange);

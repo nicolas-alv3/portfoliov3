@@ -1,0 +1,98 @@
+---
+interface Props {
+    title: string,
+}
+
+const { title } = Astro.props;
+---
+<label for="modal" class="tl-more">See more</label>
+
+<input type="checkbox" id="modal">
+<label for="modal" class="modal-background"></label>
+<div class="modal">
+    <div class="modal-header">
+        <h3>{title}</h3>
+        <label for="modal">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAdVBMVEUAAABNTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU0N3NIOAAAAJnRSTlMAAQIDBAUGBwgRFRYZGiEjQ3l7hYaqtLm8vsDFx87a4uvv8fP1+bbY9ZEAAAB8SURBVBhXXY5LFoJAAMOCIP4VBRXEv5j7H9HFDOizu2TRFljedgCQHeocWHVaAWStXnKyl2oVWI+kd1XLvFV1D7Ng3qrWKYMZ+MdEhk3gbhw59KvlH0eTnf2mgiRwvQ7NW6aqNmncukKhnvo/zzlQ2PR/HgsAJkncH6XwAcr0FUY5BVeFAAAAAElFTkSuQmCC" width="16" height="16" alt="">
+        </label>
+    </div>
+    <slot/>
+</div>
+
+
+<style>
+    input[type="checkbox"] {
+        display:none;
+    }
+    input[type="checkbox"]:checked ~ .modal {
+        top: 0;
+    }
+    input[type="checkbox"]:checked ~ .modal-background {
+        z-index: 9998;
+        background-color: rgba(0,0,0,0.6);
+    }
+    .modal-background {
+        transition: all .3s ease;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -20;
+    }
+    .modal {
+        position: fixed;
+        top: -200vh;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        display: block;
+        width: 300px;
+        height: 300px;
+        border-radius: 8px;
+        border: 1px solid var(--dark-gray);
+        background-color: var(--background-body);
+        box-sizing: border-box;
+        z-index: 9999;
+        transition: all .3s ease-in-out;
+    }
+    .modal > p {
+        padding: 15px;
+        margin: 0;
+    }
+    .modal-header {
+        background-color: var(--background-body);
+        border-bottom: 1px solid var(--dark-gray);
+        box-sizing: border-box;
+        height: 50px;
+    }
+    .modal-header h3 {
+        margin: 0;
+        box-sizing: border-box;
+        padding-left: 15px;
+        line-height: 50px;
+        color: #4d4d4d;
+        font-size: 16px;
+        display: inline-block;
+    }
+    .modal-header label {
+        box-sizing: border-box;
+        float: right;
+        line-height: 50px;
+        padding: 0 .5rem;
+        cursor: pointer;
+    }
+    .modal-header label:hover img {
+        opacity: 0.6;
+    }
+    .tl-more {
+        cursor: pointer;
+        width: max-content;
+        color: var(--red);
+    }
+
+    .tl-more: hover {
+        text-effect: emboss;
+    }
+</style>

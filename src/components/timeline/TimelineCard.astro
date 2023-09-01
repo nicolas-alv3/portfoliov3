@@ -1,4 +1,5 @@
 ---
+import Modal from "../utils/Modal.astro";
 
 export interface Props {
     title: string,
@@ -38,11 +39,6 @@ const {
         margin: 0;
     }
 
-    .tl-more {
-        width: max-content;
-        color: var(--red);
-    }
-
 </style>
 
 <div class="timeline timeline-card">
@@ -55,6 +51,6 @@ const {
     </div>
     <div style="justify-content: space-between">
         <small>{date}</small>
-        <small class="tl-more">See more</small>
+        <Modal />
     </div>
 </div>
