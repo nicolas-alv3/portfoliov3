@@ -1,15 +1,40 @@
+---
+import NButton from "./utils/NButton.astro";
+---
 <>
     <div class="home-copy">
-        <h1>Nicolas Alvarez</h1>
-        <p>Building value through code
-            <!--<a href="https://www.github.com/Charca/astro-blog-template" target="_blank" rel="noopener">GitHub</a>--></p>
+        <h1>Building value through code</h1>
+        <p>I’m a Software engineer focused on add value
+            to company bussiness. </p>
+        <NButton href="#reach-me-out">Contact me!</NButton>
     </div>
 
     <div class="hero-image-container">
         <picture>
-            <source srcset="/assets/casual-life-3d-young-man-in-headset-using-computer.webp" media="(min-width: 600px)">
+            <source srcset="/assets/computer.svg" media="(min-width: 600px)">
             <img class="hero-image" alt="Illustration of person reading a book"
-                 src="/assets/casual-life-3d-young-man-in-headset-using-computer.webp" width="256" height="307">
+                 src="/assets/computer.svg" width="256" height="500">
         </picture>
     </div>
 </>
+
+<style>
+    h1{
+        margin: 0;
+    }
+
+    p {
+        margin: 1rem 0;
+        padding-right: 3rem;
+    }
+
+    img {
+        width: 24em;
+        height: 20em;
+        flex-shrink: 0;
+    }
+
+    .home-copy {
+        width: 35em;
+    }
+</style>
