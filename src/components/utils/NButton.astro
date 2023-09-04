@@ -6,9 +6,10 @@ const { href } = Astro.props;
 ---
 
 
-<button><a href={href}><slot /></a></button>
+<a href={href}><button><slot /></button></a>
 <style>
     button {
+        width: 100%;
         display: flex;
         padding: 1rem 2rem;
         justify-content: center;
@@ -21,7 +22,7 @@ const { href } = Astro.props;
         box-shadow: 0 4px 4px 0 rgba(220, 0, 0, 0.37);
     }
 
-    a {
+    a, button {
         color: #DBDEE1;
         text-decoration: none;
 

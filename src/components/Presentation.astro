@@ -11,9 +11,9 @@ import NButton from "./utils/NButton.astro";
 
     <div class="hero-image-container">
         <picture>
-            <source srcset="/assets/computer.svg" media="(min-width: 600px)">
+            <source srcset="/assets/computer.webp" media="(min-width: 600px)">
             <img class="hero-image" alt="Illustration of person reading a book"
-                 src="/assets/computer.svg" width="256" height="500">
+                 src="/assets/computer.webp" width="256" height="500">
         </picture>
     </div>
 </>
@@ -25,7 +25,6 @@ import NButton from "./utils/NButton.astro";
 
     p {
         margin: 1rem 0;
-        padding-right: 3rem;
     }
 
     img {
@@ -35,6 +34,9 @@ import NButton from "./utils/NButton.astro";
     }
 
     .home-copy {
-        width: 35em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 35em;
     }
 </style>
