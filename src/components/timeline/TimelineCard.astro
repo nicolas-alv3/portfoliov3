@@ -1,19 +1,22 @@
 ---
 import Modal from "../utils/Modal.astro";
-
+import {iconsMapping, Project} from "../../../resources/data";
 export interface Props {
-    title: string,
-    text: string,
-    date: string,
-    images: string[],
+    project: Project
 }
 
 const {
-    title = '',
-    text = '',
-    date = '',
-    images= [],
+    project
 } = Astro.props;
+
+const {
+    title,
+    description,
+    shortDescription,
+    date,
+    stack,
+} = project;
+const icons = () => stack.reduce((acc, el) => iconsMapping[el] ? acc.concat([iconsMapping[el]]) : acc, []);
 ---
 
 <style xmlns="http://www.w3.org/1999/xhtml">
@@ -44,13 +47,15 @@ const {
 <div class="timeline timeline-card">
     <div>
         <h2>{title}</h2>
-        <p>{text}</p>
+        <p>{shortDescription}</p>
         <span>
-        {images.map( i => <img src={i} width="32" height="32" alt=""/>)}
+        {icons().map(i => <img src={i} width="32" height="32" alt=""/>)}
             </span>
     </div>
     <div style="justify-content: space-between">
         <small>{date}</small>
-        <Modal />
+        <Modal id={title} title={title}>
+            {description}
+        </Modal>
     </div>
 </div>

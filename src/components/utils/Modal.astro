@@ -1,22 +1,30 @@
 ---
 interface Props {
     title: string,
+    id: string,
 }
 
-const { title } = Astro.props;
+const { title, id } = Astro.props;
 ---
-<label for="modal" class="tl-more">See more</label>
+<label for={id} class="tl-more">
+    See more
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="var(--mid-gray)" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+    </svg>
+</label>
 
-<input type="checkbox" id="modal">
-<label for="modal" class="modal-background"></label>
+<input type="checkbox" id={id}>
+<label for={id} class="modal-background"></label>
 <div class="modal">
     <div class="modal-header">
         <h3>{title}</h3>
-        <label for="modal">
+        <label for={id}>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAdVBMVEUAAABNTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU0N3NIOAAAAJnRSTlMAAQIDBAUGBwgRFRYZGiEjQ3l7hYaqtLm8vsDFx87a4uvv8fP1+bbY9ZEAAAB8SURBVBhXXY5LFoJAAMOCIP4VBRXEv5j7H9HFDOizu2TRFljedgCQHeocWHVaAWStXnKyl2oVWI+kd1XLvFV1D7Ng3qrWKYMZ+MdEhk3gbhw59KvlH0eTnf2mgiRwvQ7NW6aqNmncukKhnvo/zzlQ2PR/HgsAJkncH6XwAcr0FUY5BVeFAAAAAElFTkSuQmCC" width="16" height="16" alt="">
         </label>
     </div>
-    <slot/>
+    <div class="n-modal-content">
+        <slot/>
+    </div>
 </div>
 
 
@@ -48,8 +56,10 @@ const { title } = Astro.props;
         bottom: 0;
         margin: auto;
         display: block;
-        width: 300px;
-        height: 300px;
+        max-width: 1500px;
+        width: 90%;
+        max-height: 1000px;
+        height: max-content;
         border-radius: 8px;
         border: 1px solid var(--dark-gray);
         background-color: var(--background-body);
@@ -86,13 +96,16 @@ const { title } = Astro.props;
     .modal-header label:hover img {
         opacity: 0.6;
     }
+    .n-modal-content {
+        padding: 2rem;
+    }
     .tl-more {
         cursor: pointer;
         width: max-content;
-        color: var(--red);
+        color: var(--primary-color);
     }
 
     .tl-more:hover {
-        text-effect: emboss;
+        text-decoration: underline;
     }
 </style>
