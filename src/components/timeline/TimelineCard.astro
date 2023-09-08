@@ -36,6 +36,10 @@ const icons = () => stack.reduce((acc, el) => iconsMapping[el] ? acc.concat([ico
         margin: 0;
     }
 
+    h4 {
+        margin: .5em 0;
+    }
+
     p {
         color: var(--text-secondary);
         width: max-content;
@@ -55,7 +59,15 @@ const icons = () => stack.reduce((acc, el) => iconsMapping[el] ? acc.concat([ico
     <div style="justify-content: space-between">
         <small>{date}</small>
         <Modal id={title} title={title}>
+            <div style="display: flex; justify-content: center; align-items: center">
+                <img alt="modal-image" style="height: 16rem; width: 16rem; object-fit: cover" src={project.img}/>
+            </div>
+            <h4>Tech stack</h4>
+            {project.stack.map((t, i) => <span class="badge"
+                                               style={`background: ${i % 2 ? 'var(--grad-red)' : 'var(--grad-violet)'}`}>{t}</span>)}
+            <h4>Description</h4>
             {description}
+
         </Modal>
     </div>
 </div>

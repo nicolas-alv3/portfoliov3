@@ -2,11 +2,11 @@
 interface Props {
     href: string;
 }
-const { href } = Astro.props;
+const { href, color } = Astro.props;
 ---
 
 
-<a href={href}><button><slot /></button></a>
+<a href={href}><button style={`background: ${color}; box-shadow: box-shadow: 0 4px 4px 0 ${color}`}><slot /></button></a>
 <style>
     button {
         width: 100%;

@@ -1,4 +1,5 @@
 ---
+import NButton from "./NButton.astro";
 interface Props {
     title: string,
     id: string,
@@ -17,13 +18,16 @@ const { title, id } = Astro.props;
 <label for={id} class="modal-background"></label>
 <div class="modal">
     <div class="modal-header">
-        <h3>{title}</h3>
+        <h2>{title}</h2>
         <label for={id}>
             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAdVBMVEUAAABNTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU1NTU0N3NIOAAAAJnRSTlMAAQIDBAUGBwgRFRYZGiEjQ3l7hYaqtLm8vsDFx87a4uvv8fP1+bbY9ZEAAAB8SURBVBhXXY5LFoJAAMOCIP4VBRXEv5j7H9HFDOizu2TRFljedgCQHeocWHVaAWStXnKyl2oVWI+kd1XLvFV1D7Ng3qrWKYMZ+MdEhk3gbhw59KvlH0eTnf2mgiRwvQ7NW6aqNmncukKhnvo/zzlQ2PR/HgsAJkncH6XwAcr0FUY5BVeFAAAAAElFTkSuQmCC" width="16" height="16" alt="">
         </label>
     </div>
     <div class="n-modal-content">
         <slot/>
+    </div>
+    <div style="display: flex; justify-content: flex-end; margin: 1rem">
+        <NButton color="var(--dark-gray)"><label for={id}>Close</label></NButton>
     </div>
 </div>
 
@@ -102,6 +106,13 @@ const { title, id } = Astro.props;
     .tl-more {
         cursor: pointer;
         width: max-content;
+        color: var(--primary-color);
+        display: flex;
+        align-items: center;
+    }
+
+    h2 {
+        margin: 1rem;
         color: var(--primary-color);
     }
 

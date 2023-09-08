@@ -4,6 +4,7 @@ export enum Technologies {
     ANGULAR = "Angular",
     NODE = "NodeJS",
     NEST_JS = "NestJS",
+    NEXT_JS = "NextJS",
     MONGO = "MongoDB",
     JS_REPORT = "JSreport",
     MYSQL = "Mysql",
@@ -17,6 +18,7 @@ export const iconsMapping = {
     [Technologies.REACT]: "assets/icons/react.svg",
     [Technologies.ANGULAR]: "assets/icons/angular.svg",
     [Technologies.NODE]: "assets/icons/node.svg",
+    [Technologies.NEXT_JS]: "assets/icons/next.svg",
     [Technologies.NEST_JS]: "",
     [Technologies.MONGO]: "",
     [Technologies.JS_REPORT]: "",
@@ -32,6 +34,8 @@ export interface Project {
     shortDescription: string,
     date: string,
     stack: Technologies[],
+    link?: string,
+    img: string,
 }
 
 const redbee = {
@@ -45,9 +49,11 @@ const redbee = {
 const pomeloBebes: Project = {
     title: "Pomelo Bebes",
     shortDescription: "Clothes store",
-    description: "The client approached me with the concept of creating an online catalog, to which I proposed utilizing WhatsApp microservices to complete the sales cycle, with the potential to integrate a payment method in the future. This project provided me with valuable insights into Angular and allowed me to enhance my proficiency in JavaScript and design.",
-    stack: [Technologies.ANGULAR, Technologies.NODE, Technologies.NEST_JS, Technologies.MONGO],
-    date: "Mar 21"
+    description: "The client approached me with the concept of creating an online catalog, to which I proposed utilizing WhatsApp microservices to complete the sales cycle, with the potential to integrate a payment method in the future. This project provided me with valuable insights into NextJS and allowed me to enhance my proficiency in JavaScript and design.",
+    stack: [Technologies.NEXT_JS, Technologies.NODE, Technologies.NEST_JS, Technologies.MONGO],
+    date: "Mar 21",
+    img: "https://pomelobebes.vercel.app/_next/static/media/logo_pomelo_cuadrado.c8a2d125.png?imwidth=64",
+    link: "https://youtu.be/-ZIlGy2ew0g"
 }
 
 const distribuidoraJd: Project = {
@@ -55,7 +61,9 @@ const distribuidoraJd: Project = {
     shortDescription: "Stock & Sales",
     description: "Within the application, users can upload, edit, and delete products, as well as adjust their stock from a dedicated tab. The application allows for sales, with products identified by code and description. Additionally, users can search for products and view sales separately. Upon completing a sale, users can generate a sales receip using a JSReport template. Currently, I am working on developing the Balance and Purchases modules, with the future goal of implementing automatic purchase lists and monthly financial statements.",
     stack: [Technologies.REACT, Technologies.JAVA, Technologies.JS_REPORT, Technologies.MYSQL, Technologies.MATERIALUI, Technologies.SPRINGBOOT, Technologies.TDD],
-    date: "Mar 21"
+    date: "Mar 21",
+    img: "https://raw.githubusercontent.com/nicolas-alv3/DistribuidoraJDFront/master/src/icons/logo.png",
+    link: "https://youtu.be/-ZIlGy2ew0g"
 }
 
 export const projects: Project[] = [pomeloBebes, distribuidoraJd];

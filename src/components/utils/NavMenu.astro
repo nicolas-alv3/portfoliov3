@@ -7,7 +7,7 @@ const {current = ''} = Astro.props;
     .menu-collapse {
         background: var(--text-secondary);
         left: 0;
-        top: 0;
+        top: -300px;
         position: absolute;
         width: 100%;
     }
@@ -42,13 +42,13 @@ const {current = ''} = Astro.props;
 </style>
 
 <>
-    <div class="collapse menu-collapse" id="collapseExample">
+    <div class="collapse menu-collapse" id="navigation">
         <div class="menu-content">
             <a class={current === "" ? "selected" : ""} href='/'>HOME</a>
             <a class={current === "about" ? "selected" : ""} href='/#experience'>EXPERIENCE</a>
             <a class={current === "blog" ? "selected" : ""} href='/#education'>EDUCATION</a>
             <a class={current === "blog" ? "selected" : ""} href='/#projects'>PROJECTS</a>
-            <a type="button" data-bs-toggle="collapse" href="#collapseExample" role="button"
+            <a type="button" data-bs-toggle="collapse" href="#navigation" role="button"
                aria-expanded="false" aria-controls="collapseExample" aria-label="Close">
                 <img src="/assets/icons/chevron-up.svg" width="32" height="32" alt="chevron-icon"/>
             </a>
