@@ -360,6 +360,10 @@ nav img {
     display: inline-block;
 }
 
+.hidden {
+    display: none !important;
+}
+
 @media (max-width: 1020px) {
     h1 {
         font-size: 3em;
