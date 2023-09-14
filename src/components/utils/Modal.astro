@@ -27,7 +27,7 @@ const { title, id } = Astro.props;
         <slot/>
     </div>
     <div style="display: flex; justify-content: flex-end; margin: 1rem">
-        <NButton color="var(--dark-gray)"><label for={id}>Close</label></NButton>
+        <label class="close-button" for={id}>Close</label>
     </div>
 </div>
 
@@ -63,7 +63,7 @@ const { title, id } = Astro.props;
         max-width: 1500px;
         width: 90%;
         max-height: 100%;
-        overflow: scroll;
+        overflow: auto;
         height: max-content;
         border-radius: 8px;
         border: 1px solid var(--dark-gray);
@@ -119,5 +119,28 @@ const { title, id } = Astro.props;
 
     .tl-more:hover {
         text-decoration: underline;
+    }
+
+    .close-button {
+        width: 100%;
+        display: flex;
+        padding: 1rem 2rem;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        border-radius: 8px;
+        border: none;
+        background: linear-gradient(94deg, #9906AA 0%, #DC0000 100%);
+        box-shadow: 0 4px 4px 0 rgba(220, 0, 0, 0.37);
+        cursor: pointer;
+        color: #DBDEE1;
+        text-decoration: none;
+
+        /* Text button */
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: -0.0125rem;
     }
 </style>

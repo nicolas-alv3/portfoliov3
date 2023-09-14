@@ -6,7 +6,7 @@ const { href, color } = Astro.props;
 ---
 
 
-<a href={href}><button style={`background: ${color}; box-shadow: box-shadow: 0 4px 4px 0 ${color}`}><slot /></button></a>
+<button style={`background: ${color}; box-shadow: box-shadow: 0 4px 4px 0 ${color}`}><slot /></button>
 <style>
     button {
         width: 100%;
@@ -23,6 +23,7 @@ const { href, color } = Astro.props;
     }
 
     a, button {
+        cursor: pointer;
         color: #DBDEE1;
         text-decoration: none;
 
