@@ -15,6 +15,7 @@ const {
     shortDescription,
     date,
     stack,
+    link
 } = project;
 const icons = () => stack.reduce((acc, el) => iconsMapping[el] ? acc.concat([iconsMapping[el]]) : acc, []);
 ---
@@ -59,14 +60,23 @@ const icons = () => stack.reduce((acc, el) => iconsMapping[el] ? acc.concat([ico
     <div style="justify-content: space-between">
         <small>{date}</small>
         <Modal id={title} title={title}>
-            <div style="display: flex; justify-content: center; align-items: center">
-                <img alt="modal-image" style="height: 16rem; width: 16rem; object-fit: cover" src={project.img}/>
+
+            <div>
+                {
+                    link ?
+                            <iframe src="https://www.youtube.com/embed/-ZIlGy2ew0g?si=bDHBpNicPYAaQS6Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>:
+                            <img alt="modal-image" style="height: 16rem; width: 16rem; object-fit: cover"
+                                 src={project.img}/>
+                }
+                <div>
+                    <h4>Tech stack</h4>
+                    <div style="display: flex; flex-direction: row; flex-wrap: wrap">
+                        {project.stack.map((t, i) => <span class="badge">{t}</span>)}
+                    </div>
+                    <h4>Description</h4>
+                    {description}
+                </div>
             </div>
-            <h4>Tech stack</h4>
-            {project.stack.map((t, i) => <span class="badge"
-                                               style={`background: ${i % 2 ? 'var(--grad-red)' : 'var(--grad-violet)'}`}>{t}</span>)}
-            <h4>Description</h4>
-            {description}
 
         </Modal>
     </div>

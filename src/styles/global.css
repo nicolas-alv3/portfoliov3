@@ -353,9 +353,10 @@ nav img {
 }
 
 .badge {
-    padding: .2em .4em;
+    width: max-content;
+    padding: .1em .6em;
     margin:  0 .2rem .2rem 0;
-    color: var(--light-gray);
+    border: 1px solid var(--dark-gray);
     border-radius: 1rem;
     display: inline-block;
 }
