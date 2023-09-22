@@ -15,7 +15,8 @@ const {
     shortDescription,
     date,
     stack,
-    link
+    link,
+    testUrl,
 } = project;
 const icons = () => stack.reduce((acc, el) => iconsMapping[el] ? acc.concat([iconsMapping[el]]) : acc, []);
 ---
@@ -63,10 +64,10 @@ const icons = () => stack.reduce((acc, el) => iconsMapping[el] ? acc.concat([ico
 
             <div>
                 {
-                    link ?
-                            <iframe src="https://www.youtube.com/embed/-ZIlGy2ew0g?si=bDHBpNicPYAaQS6Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>:
-                            <img alt="modal-image" style="height: 16rem; width: 16rem; object-fit: cover"
-                                 src={project.img}/>
+                    project.img ? <img alt="modal-image" style="margin: auto;height: 16rem; width: 16rem; object-fit: scale-down;"
+                                       src={project.img}/> :
+                            <iframe src={link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
                 }
                 <div>
                     <h4>Tech stack</h4>
@@ -74,7 +75,14 @@ const icons = () => stack.reduce((acc, el) => iconsMapping[el] ? acc.concat([ico
                         {project.stack.map((t, i) => <span class="badge">{t}</span>)}
                     </div>
                     <h4>Description</h4>
-                    {description}
+                    <p>{
+                        description.split('-').map(item => <li>{item}</li>)
+                    }</p>
+                    {
+                        testUrl ?  <>
+                            <h6>Project's alive! Check it out <a href={testUrl}>here!</a></h6>
+                        </>: <div/>
+                    }
                 </div>
             </div>
 

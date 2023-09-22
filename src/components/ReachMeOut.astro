@@ -1,9 +1,12 @@
 ---
 const logos = [
-    {link: "linkedin link/", logo: "assets/icons/gmail.svg", text: "Email"},
-    {link: "linkedin link/", logo: "assets/icons/telegram.svg", text: "Telegram"},
-    {link: "linkedin link/", logo: "assets/icons/linkedin.svg", text: "LinkedIn"},
+    {link: "https://mail.google.com/mail/u/0/?fs=1&to=nicolas.alv3@gmail.com&su=Contacto+v%C3%ADa+portfolio&body=Hey+Nico,+como+estas?&tf=cm", logo: "assets/icons/gmail.svg", text: "Email"},
+    {link: "https://t.me/nico_alvarez3", logo: "assets/icons/telegram.svg", text: "Telegram"},
+    {link: "https://www.linkedin.com/in/nicol%C3%A1s-sebastian-alvarez/", logo: "assets/icons/linkedin.svg", text: "LinkedIn"},
 ]
+function openWindow(link: string) {
+    window.open(link, '_blank')
+}
 ---
 <style>
     p {
@@ -46,7 +49,7 @@ const logos = [
     <p>Contact me on the following links</p>
     <div class="links-container">
         { logos.map(({logo,link, text}) => <div>
-            <img alt="logo" src={logo}/>
+            <img alt="logo" src={logo} onclick={openWindow(link)}/>
             <p>{text}</p>
             </div>) }
     </div>
