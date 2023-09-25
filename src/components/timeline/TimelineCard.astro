@@ -48,6 +48,14 @@ const icons = () => stack.reduce((acc, el) => iconsMapping[el] ? acc.concat([ico
         margin: 0;
     }
 
+    .project-img {
+        margin: auto;
+        height: 16rem;
+        width: 16rem;
+        object-fit: scale-down;
+        border-radius: 8px;
+    }
+
 </style>
 
 <div class="timeline timeline-card">
@@ -64,9 +72,12 @@ const icons = () => stack.reduce((acc, el) => iconsMapping[el] ? acc.concat([ico
 
             <div>
                 {
-                    project.img ? <img alt="modal-image" style="margin: auto;height: 16rem; width: 16rem; object-fit: scale-down;"
+                    project.img ? <img alt="modal-image"
+                                       class="project-img"
                                        src={project.img}/> :
-                            <iframe src={link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe src={link} title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen></iframe>
 
                 }
                 <div>
@@ -76,12 +87,15 @@ const icons = () => stack.reduce((acc, el) => iconsMapping[el] ? acc.concat([ico
                     </div>
                     <h4>Description</h4>
                     <p>{
-                        description.split('-').map(item => <li>{item}</li>)
+                        description.split('-').map(item =>
+                                <li>{item}</li>)
                     }</p>
                     {
-                        testUrl ?  <>
-                            <h6>Project's alive! Check it out <a href={testUrl}>here!</a></h6>
-                        </>: <div/>
+                        testUrl ?
+                                <>
+                                    <h6>Project's alive! Check it out <a href={testUrl}>here!</a></h6>
+                                </> :
+                                <div/>
                     }
                 </div>
             </div>

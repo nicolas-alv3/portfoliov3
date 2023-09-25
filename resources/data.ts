@@ -72,7 +72,7 @@ const ensolvers = {
     title: "Ensolvers",
     shortDescription: "Fullstack developer",
     description: `
-    Migrated frontend from AngularJS to React per Figma UX-UI designs.
+    Migrated frontend from AngularJS to React per Figma UX/UI designs.
     - Provided live support for bug resolution and customer inquiries.
     - Contributed to backend development using Java and Spring Boot.`,
     stack: [Technologies.JAVA, Technologies.REACT, Technologies.MYSQL, Technologies.SPRINGBOOT],
