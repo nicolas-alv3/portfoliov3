@@ -1,17 +1,14 @@
 ---
 const logos = [
-    {link: "mailto:nicolas.alv3@gmail.com", logo: "assets/icons/gmail.svg", text: "Email"},
-    {link: "https://t.me/nico_alvarez3", logo: "assets/icons/telegram.svg", text: "Telegram"},
-    {
-        link: "https://www.linkedin.com/in/nicol%C3%A1s-sebastian-alvarez/",
-        logo: "assets/icons/linkedin.svg",
-        text: "LinkedIn"
-    },
+    {logo: "assets/icons/teamwork.svg", text: "Collaborative Approach"},
+    {logo: "assets/icons/design.svg", text: "Design first"},
+    {logo: "assets/icons/improvement.svg", text: "Continuous improvement"},
 ]
 ---
 <style>
-    p {
+    .links-container p {
         color: var(--text-secondary);
+        text-align: center;
     }
 
     img {
@@ -45,15 +42,13 @@ const logos = [
 
 <section id="reach-me-out">
     <hr/>
-    <h2></h2>
-    <h2 class="grad-text"> Thanks </h2>
-    <h2>for your time</h2>
-    <p>Contact me on the following links</p>
+    <h2>The way I </h2>
+    <h2 class="grad-text"> collaborate </h2>
+    <p>How i make things work</p>
     <div class="links-container">
-        {logos.map(({logo, link, text}) =>
+        {logos.map(({logo, text}) =>
                 <div>
-                    <a href={link} target="_blank">
-                        <img alt="logo" src={logo}/></a>
+                    <img alt="logo" src={logo}/>
                     <p>{text}</p>
                 </div>) }
             </div>
