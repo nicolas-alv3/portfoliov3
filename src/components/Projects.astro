@@ -16,21 +16,14 @@ import {projects} from "../../resources/data";
 
 <section id="projects">
     <hr/>
-    <h2>How I've </h2> <h2 class="grad-text"> tried out </h2> <h2>new tools</h2>
-    <h5>Making new personal projects</h5>
+    <h2>Code </h2> <h2 class="grad-text"> playground</h2> <h2></h2>
+    <h5>Crafting personal projects and testing ideas</h5>
     <div class="timeline-container">
         <SmallTimelineItem label="Today"/>
         {projects.map( p => (
                 <Dots/>
                 <TimelineCard project={p}/>
         ))}
-        <!--<TimelineCard title="Glistore" text="Build your own store" images={[logos.next,logos.node]} date="Jun/23"/>-->
-        <!--<Dots/>-->
-        <!--<TimelineCard title="Pomelo bebes" text="Clothes store" images={[logos.next,logos.node]} date="Mar/22"/>-->
-        <!--<Dots/>-->
-        <!--<TimelineCard title="LosHermanos" text="Stock & Sales" images={[logos.react,logos.kotlin]} date="Dec/21"/>-->
-        <!--<Dots/>-->
-        <!--<TimelineCard title="DistribJD" text="Stock & Sales" images={[logos.react,logos.java]} date="Mar/21"/>-->
     </div>
 
 </section>

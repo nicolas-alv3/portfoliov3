@@ -1,0 +1,35 @@
+---
+import NButton from "./utils/NButton.astro";
+---
+<>
+    <div class="home-copy">
+        <h1>Code as a Business Enabler</h1>
+        <p>I see code as a powerful business enabler, crafting solutions that directly address and resolve critical challenges, driving overall business success </p>
+        <a href="#reach-me-out"><NButton>Contact me!</NButton></a>
+    </div>
+
+    <div class="hero-image-container">
+        <picture>
+            <source srcset="/assets/computer.webp" media="(min-width: 600px)">
+            <img class="hero-image" alt="Illustration of person reading a book"
+                 src="/assets/computer.webp" width="500" height="500">
+        </picture>
+    </div>
+</>
+
+<style>
+    h1{
+        margin: 0;
+    }
+
+    p {
+        margin: 1rem 0;
+    }
+
+    .home-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 35em;
+    }
+</style>

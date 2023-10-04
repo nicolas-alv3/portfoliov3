@@ -1,35 +1,37 @@
----
-import NButton from "./utils/NButton.astro";
----
-<>
-    <div class="home-copy">
-        <h1>Code as a Business Enabler</h1>
-        <p>I see code as a powerful business enabler, crafting solutions that directly address and resolve critical challenges, driving overall business success </p>
-        <a href="#reach-me-out"><NButton>Contact me!</NButton></a>
-    </div>
-
-    <div class="hero-image-container">
-        <picture>
-            <source srcset="/assets/computer.webp" media="(min-width: 600px)">
-            <img class="hero-image" alt="Illustration of person reading a book"
-                 src="/assets/computer.webp" width="500" height="500">
-        </picture>
-    </div>
-</>
-
 <style>
-    h1{
-        margin: 0;
-    }
-
-    p {
-        margin: 1rem 0;
-    }
-
-    .home-copy {
+    .box {
+        border: 2px solid var(--dark-gray);
+        border-radius: 8px;
+        padding: 3rem;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        max-width: 35em;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+    }
+
+    h6 {
+        width: min(50rem, 100%);
+    }
+
+    img {
+        width: 15rem;
+        border-radius: 50%;
     }
 </style>
+
+<section id="about-me">
+    <hr/>
+    <h2>Hello</h2>
+    <h2 class="grad-text"> world! </h2>
+    <h5>Here's a little about me</h5>
+    <div class="box">
+        <img src="/assets/pfp.png" alt="profile picture" />
+        <h6>
+            Hey there! I'm <b>Nicolas Alvarez</b> a passionate fullstack developer and computer science student actively seeking an inspiring work environment.
+            Known for my strong sense of responsibility, proactive approach, quick learning abilities, and collaborative spirit.
+            I'm eager to join a company that provides a clear career path to enhance both my technical expertise and interpersonal skills.
+        </h6>
+    </div>
+
+</section>

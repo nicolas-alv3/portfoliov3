@@ -1,12 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Presentation from "../components/Presentation.astro";
+import ValueProposition from "../components/ValueProposition.astro";
 import Experience from "../components/Experience.astro";
 import Education from "../components/education/Education.astro";
 import Projects from "../components/Projects.astro";
 import ReachMeOut from "../components/ReachMeOut.astro";
 import TheWayICode from "../components/TheWayICode.astro";
 import GetMyCV from "../components/GetMyCV.astro";
+import Presentation from "../components/Presentation.astro";
 
 const title = 'Nicolas Alvarez | Portfolio';
 const description = 'Welcome to my portfolio! Find more about me in linktr.ee/nicolas_alvarez';
@@ -15,14 +16,15 @@ const permalink = Astro.site.href;
 
 <BaseLayout title={title} description={description} permalink={permalink}>
     <div class="home-container">
-        <Presentation/>
+        <ValueProposition/>
     </div>
+    <Presentation/>
     <Experience/>
-    <Education />
+    <Education/>
     <TheWayICode/>
-    <Projects />
-    <GetMyCV />
-    <ReachMeOut />
+    <Projects/>
+    <GetMyCV/>
+    <ReachMeOut/>
     <a href={"https://t.me/nico_alvarez3"} target="_blank">
         <img class="telegram-contact" alt="logo" src={"assets/icons/telegram.svg"}/>
     </a>
@@ -35,6 +37,7 @@ const permalink = Astro.site.href;
         right: 1.2rem;
         width: 5rem;
     }
+
     .home-container {
         align-items: center;
         display: flex;
