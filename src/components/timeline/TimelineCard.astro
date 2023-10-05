@@ -86,10 +86,10 @@ const icons = () => stack.reduce((acc, el) => iconsMapping[el] ? acc.concat([ico
                         {project.stack.map((t, i) => <span class="badge">{t}</span>)}
                     </div>
                     <h4>Description</h4>
-                    <p>{
+                    <ul>{
                         description.split('-').map(item =>
                                 <li>{item}</li>)
-                    }</p>
+                    }</ul>
                     {
                         testUrl ?
                                 <>
