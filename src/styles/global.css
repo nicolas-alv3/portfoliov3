@@ -357,6 +357,11 @@ nav img {
     display: none !important;
 }
 
+iframe {
+    border: none;
+    border-radius: 12px;
+}
+
 @media (max-width: 1020px) {
     h1 {
         font-size: 3em;
