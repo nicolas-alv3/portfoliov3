@@ -87,7 +87,7 @@ const pomeloBebes: Project = {
     stack: [Technologies.NEXT_JS, Technologies.NODE, Technologies.NEST_JS, Technologies.MONGO],
     date: "Mar 21",
     img: "https://pomelobebes.vercel.app/_next/static/media/logo_pomelo_cuadrado.c8a2d125.png?imwidth=64",
-    link: "https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6969355242471600128?compact=1"
+    link: "https://www.loom.com/embed/0171ca02451246ebbfd6e7c737ed8a0b?sid=ee716f36-7603-4f11-8a38-22434a55c5a5"
 }
 
 const losHermanos: Project = {
@@ -97,7 +97,7 @@ const losHermanos: Project = {
     stack: [Technologies.KOTLIN, Technologies.REACT, Technologies.SPRINGBOOT, Technologies.MYSQL, Technologies.TDD],
     date: "2017",
     img: "https://raw.githubusercontent.com/nicolas-alv3/Corralon-y-ferreteria-los-dos-hermanos/master/frontend/src/icons/logo-horizontal.png",
-    link: "https://www.youtube.com/embed/-ZIlGy2ew0g?si=bDHBpNicPYAaQS6Y"
+    link: "https://www.loom.com/embed/47785fd6238048048b6e01c47f9b6022?sid=f3c96aad-2d1f-46c4-a8e7-73f7ce27106d"
 }
 
 const distribuidoraJd: Project = {
@@ -107,7 +107,7 @@ const distribuidoraJd: Project = {
     stack: [Technologies.REACT, Technologies.JAVA, Technologies.JS_REPORT, Technologies.MYSQL, Technologies.MATERIALUI, Technologies.SPRINGBOOT, Technologies.TDD],
     date: "2016",
     img: "https://raw.githubusercontent.com/nicolas-alv3/DistribuidoraJDFront/master/src/icons/logo.png",
-    link: "https://www.youtube.com/embed/-ZIlGy2ew0g?si=bDHBpNicPYAaQS6Y"
+    link: "https://www.loom.com/embed/2c219fba48354ca493086ec34614f569?sid=15677230-c944-4b80-885b-232aa3d5a798"
 }
 
 const glistore: Project = {
@@ -117,7 +117,7 @@ const glistore: Project = {
     stack: [Technologies.NEXT_JS, Technologies.NODE, Technologies.NEST_JS, Technologies.MONGO, Technologies.SEMANTICUI],
     date: "2016",
     img: "https://glidersoftware.web.app/static/media/gliderlogo.72278e90.png",
-    link: "https://www.youtube.com/embed/-ZIlGy2ew0g?si=bDHBpNicPYAaQS6Y",
+    link: "https://www.loom.com/embed/21ab77f477be42cda699e0cbc7bc011a?sid=ebf29d7f-5f7b-4207-8bcd-4a5ee52fb6d8",
     testUrl: "https://glistore.vercel.app"
 }
 
