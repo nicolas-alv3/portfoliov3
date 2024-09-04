@@ -362,6 +362,10 @@ iframe {
     border-radius: 12px;
 }
 
+section {
+    margin: 0 10em
+}
+
 @media (max-width: 1020px) {
     h1 {
         font-size: 3em;
@@ -395,5 +399,9 @@ iframe {
 
     nav img {
         display: block;
+    }
+
+    section {
+        margin: 0
     }
 }

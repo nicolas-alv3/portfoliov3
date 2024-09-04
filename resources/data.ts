@@ -57,6 +57,21 @@ const redbee = {
     date: "Jun 22"
 }
 
+const tiendamia = {
+    title: "Tiendamia",
+    shortDescription: "Software engineer",
+    description: `
+    Led the optimization of high-traffic systems to handle significant traffic spikes efficiently.
+
+    - Managed large-scale traffic flows with proactive monitoring and scaling strategies.\n
+    - Integrated business metrics tracking and service monitoring to ensure seamless operations and informed decision-making\n
+    - Utilized ElasticSearch and RabbitMQ to enhance performance and reliability.\n
+    - Leveraged AWS services such as Lambda, S3, EC2, and CloudWatch to build and monitor scalable, cloud-based solutions.`,
+    stack: [Technologies.NODE, Technologies.ANGULAR, Technologies.SQLSERVER, Technologies.SPRINGBOOT],
+    img: "https://vfcomunicaciones.cl/wp-content/uploads/2019/04/redbee.jpg",
+    date: "Mar 24"
+}
+
 const factorIT = {
     title: "FactorIT",
     shortDescription: "Fullstack developer",
@@ -123,4 +138,4 @@ const glistore: Project = {
 
 export const projects: Project[] = [glistore, pomeloBebes, losHermanos, distribuidoraJd];
 
-export const jobs: Project[] = [redbee, ensolvers, factorIT]
+export const jobs: Project[] = [tiendamia, redbee, ensolvers, factorIT]
