@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ValueProposition from "../components/ValueProposition.astro";
+import Experience from "../components/Experience.astro";
+import Education from "../components/education/Education.astro";
+import Projects from "../components/Projects.astro";
+import ReachMeOut from "../components/ReachMeOut.astro";
+import TheWayICode from "../components/TheWayICode.astro";
+import GetMyCV from "../components/GetMyCV.astro";
+import Presentation from "../components/Presentation.astro";
+import Podcast from "../components/Podcast.astro";
+
+const title = 'Nicolas Alvarez | Portfolio';
+const description = 'Welcome to my portfolio! Find more about me in linktr.ee/nicolas_alvarez';
+const permalink = Astro.site.href;
+---
+
+<BaseLayout title={title} description={description} permalink={permalink}>
+    <div class="home-container">
+        <ValueProposition/>
+    </div>
+    <Presentation/>
+    <Experience/>
+    <Education/>
+    <Projects/>
+    <TheWayICode/>
+    <GetMyCV/>
+    <Podcast/>
+    <ReachMeOut/>
+    <a href={"https://t.me/nico_alvarez3"} target="_blank">
+        <img class="telegram-contact" alt="logo" src={"assets/icons/telegram.svg"}/>
+    </a>
+</BaseLayout>
+
+<style>
+    .telegram-contact {
+        position: fixed;
+        bottom: 1.2rem;
+        right: 1.2rem;
+        width: 5rem;
+    }
+
+    .home-container {
+        align-items: center;
+        display: flex;
+        flex: 1;
+        justify-content: space-evenly;
+        margin: 2em 0;
+        min-height: 400px;
+        gap: 5em;
+    }
+
+    .home-copy {
+        flex: 1;
+        padding: 0 1em;
+    }
+
+    .home-copy h1 {
+        font-weight: 700;
+        line-height: 1.3;
+    }
+
+    .home-copy p {
+        font-size: 1.4em;
+    }
+
+    .hero-image-container {
+        margin: 0 1em;
+        text-align: center;
+    }
+
+    .hero-image-container picture {
+        display: block;
+        min-height: 250px;
+    }
+
+    .caption {
+        font-size: .8em;
+        font-style: italic;
+        text-align: left;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 550px;
+        margin-bottom: 1em;
+    }
+
+    @media (max-width: 1200px) {
+        p {
+            font-size: 1.2em;
+        }
+
+        .hero-image {
+            max-width: 400px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .home-container {
+            flex-direction: column;
+        }
+
+        .home-copy {
+            flex: 0;
+            padding-bottom: 2em;
+            text-align: center;
+        }
+    }
+</style>

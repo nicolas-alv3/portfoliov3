@@ -25,7 +25,6 @@ Cuando nos falta motivación, solemos tomar dos caminos:
 2. **No hacer nada**: Inventar excusas para evitar el trabajo, desde "el día está feo" hasta "¡qué sucio está este escritorio, lo voy a limpiar por tercera vez!".
 
 **El primer paso** es ser consciente de nuestra falta de motivación. Solo al reconocerla podremos aplicar estrategias para recuperarla y continuar hacia el éxito.
-
 ---
 
 ### 2. Visualizar el impacto

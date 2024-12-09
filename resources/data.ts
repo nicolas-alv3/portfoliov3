@@ -14,6 +14,7 @@ export enum Technologies {
     MATERIALUI = "MaterialUI",
     SEMANTICUI = "SemanticUI",
     TDD = "TDD",
+    AWS = "AWS",
 }
 
 export const iconsMapping = {
@@ -23,7 +24,8 @@ export const iconsMapping = {
     [Technologies.ANGULAR]: "assets/icons/angular.svg",
     [Technologies.NODE]: "assets/icons/node.svg",
     [Technologies.NEXT_JS]: "assets/icons/next.svg",
-    [Technologies.NEST_JS]: "",
+    [Technologies.NEST_JS]: "assets/icons/nestjs.svg",
+    [Technologies.AWS]: "assets/icons/aws.svg",
     [Technologies.MONGO]: "",
     [Technologies.JS_REPORT]: "",
     [Technologies.MYSQL]: "",
@@ -67,8 +69,8 @@ const tiendamia = {
     - Integrated business metrics tracking and service monitoring to ensure seamless operations and informed decision-making\n
     - Utilized ElasticSearch and RabbitMQ to enhance performance and reliability.\n
     - Leveraged AWS services such as Lambda, S3, EC2, and CloudWatch to build and monitor scalable, cloud-based solutions.`,
-    stack: [Technologies.NODE, Technologies.ANGULAR, Technologies.SQLSERVER, Technologies.SPRINGBOOT],
-    img: "https://vfcomunicaciones.cl/wp-content/uploads/2019/04/redbee.jpg",
+    stack: [Technologies.NODE, Technologies.MYSQL, Technologies.NEST_JS, Technologies.AWS],
+    img: "data:image/png;base64,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",
     date: "Mar 24"
 }
 
